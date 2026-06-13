@@ -16,7 +16,7 @@ export async function showCoordinateMenu(player) {
         .textField("X Coordinate", "0")
         .textField("Y Coordinate", "64")
         .textField("Z Coordinate", "0")
-        .toggle("Random Seed", true)
+        .toggle("Random Seed", { default: true })
         .textField(`Specific Seed\n(${MIN_SEED} to ${MAX_SEED})`, "Enter seed...")
         .slider("Loot Amount", 3, 9, 1, 5);
 

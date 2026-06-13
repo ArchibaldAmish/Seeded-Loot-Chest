@@ -13,7 +13,7 @@ export async function showCurrentPositionMenu(player) {
 
     const form = new ModalFormData()
         .title("Spawn Loot Chest")
-        .toggle("Random Seed", true)
+        .toggle("Random Seed", { default: true })
         .textField(`Specific Seed\n(${MIN_SEED} to ${MAX_SEED})`, "Enter seed...")
         .slider("Loot Amount", 3, 9, 1, 5);
 
