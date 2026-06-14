@@ -149,6 +149,11 @@ export const LOOT_TABLE = [
         enchantType: "pickaxe"
     },
 
+    {
+        id: "minecraft:pearlescent_froglight",
+        rarity: "Legendary"
+    },
+
     // ETERNAL
 
     {
@@ -164,6 +169,12 @@ export const LOOT_TABLE = [
     {
         id: "minecraft:heavy_core",
         rarity: "Eternal"
+    },
+
+    {
+        id: "minecraft:mace",
+        rarity: "Eternal",
+        enchantType: "mace"
     }
 
 ];

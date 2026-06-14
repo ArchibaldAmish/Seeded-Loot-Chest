@@ -43,6 +43,13 @@ export const ENCHANTMENT_POOLS = {
         "unbreaking"
     ],
 
+    mace: [
+        "density",
+        "breach",
+        "wind_burst",
+        "unbreaking"
+    ],
+
     armor: [
         "protection",
         "thorns",

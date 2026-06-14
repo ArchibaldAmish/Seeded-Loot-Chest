@@ -19,6 +19,14 @@ function getRarityValue(rarityName) {
 
 }
 
+function getRarityColor(rarityName) {
+
+    return RARITIES.find(
+        r => r.name === rarityName
+    ).name;
+
+}
+
 export function generateItem(itemData, rng, seed) {
 
     const item = new ItemStack(
@@ -107,7 +115,7 @@ export function generateItem(itemData, rng, seed) {
     let value =
         Math.round(
             getRarityValue(
-                itemData.rarity
+                getRarityColor(itemData.rarity)
             ) *
             condition.value
         );
@@ -116,7 +124,7 @@ export function generateItem(itemData, rng, seed) {
 
     item.setLore([
         `§r§gValue:§2 $${value}`,
-        `§r§bRarity:§r ${itemData.rarity}`,
+        `§r§bRarity:§r ${getRarityColor(itemData.rarity)}`,
         `§r§8Condition:§r ${condition.name} (${condition.value})`,
         `§r§0LC:§r ${seed}`
     ]);
