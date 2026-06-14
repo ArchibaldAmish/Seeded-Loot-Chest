@@ -1,6 +1,7 @@
 import { world } from "@minecraft/server";
 import { spawnChest } from "../loot/generateLoot.js";
 import { generateRandomSeed, parseSeed, MIN_SEED, MAX_SEED } from "../util/seedGenerator.js";
+import { showMainMenu } from "../ui/mainMenu.js";
 
 export function registerLootChestCommand() {
     world.beforeEvents.chatSend.subscribe((event) => {
@@ -111,7 +112,6 @@ export function registerLootChestCommand() {
 
         // /lootchest menu
         if (subcommand === "menu") {
-            const { showMainMenu } = await import("../ui/mainMenu.js");
             showMainMenu(player);
             event.cancel = true;
             return;
